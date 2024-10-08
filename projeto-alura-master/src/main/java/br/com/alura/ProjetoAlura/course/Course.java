@@ -1,6 +1,7 @@
 package br.com.alura.ProjetoAlura.course;
 
 import jakarta.persistence.*;
+import org.springframework.cglib.core.Local;
 
 import java.time.LocalDateTime;
 
@@ -37,6 +38,12 @@ public class Course {
         this.description = description;
     }
 
+    public Course(String code, Status status, LocalDateTime inactivatedAt){
+        this.code = code;
+        this.status = status;
+        this.inactivatedAt = inactivatedAt;
+    }
+
     public String getName() {
         return name;
     }
@@ -64,4 +71,13 @@ public class Course {
     public LocalDateTime getInactivatedAt(){
         return inactivatedAt;
     }
+
+    public void setInactivatedAt(LocalDateTime inactivatedAt) {
+        this.inactivatedAt = inactivatedAt;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
+    }
+
 }
