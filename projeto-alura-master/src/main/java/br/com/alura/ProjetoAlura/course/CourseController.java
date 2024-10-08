@@ -34,6 +34,11 @@ public class CourseController {
 
         Optional<User> instructorUser = userRepository.findByEmail(newCourse.getInstructorEmail());
 
+        if (instructorUser.isEmpty()) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST)
+                    .body(new ErrorItemDTO("email", "Instrutor com o email informado não encontrado no sistema"));
+        }
+
         if(instructorUser.get().getRole() != Role.INSTRUCTOR){
             return ResponseEntity.status(HttpStatus.BAD_REQUEST)
                     .body(new ErrorItemDTO("email", "Email fornecido não pertence a um instrutor"));

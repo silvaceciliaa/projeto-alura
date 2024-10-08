@@ -96,34 +96,4 @@ public class RegistrationController {
         return ResponseEntity.ok(items);
     }
 
-/*
-        // Dados fictícios abaixo que devem ser substituídos
-        items.add(new RegistrationReportItem(
-                "Java para Iniciantes",
-                "java",
-                "Charles",
-                "charles@alura.com.br",
-                10L
-        ));
-
-        items.add(new RegistrationReportItem(
-                "Spring para Iniciantes",
-                "spring",
-                "Charles",
-                "charles@alura.com.br",
-                9L
-        ));
-
-        items.add(new RegistrationReportItem(
-                "Maven para Avançados",
-                "maven",
-                "Charles",
-                "charles@alura.com.br",
-                9L
-        ));
-
-        return ResponseEntity.ok(items);
-    }
-    */
-
 }
