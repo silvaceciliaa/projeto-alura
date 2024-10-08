@@ -1,7 +1,5 @@
 package br.com.alura.ProjetoAlura.registration;
 
-import br.com.alura.ProjetoAlura.user.Role;
-import br.com.alura.ProjetoAlura.util.EncryptUtil;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
