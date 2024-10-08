@@ -25,7 +25,6 @@ public class CourseController {
         this.userRepository = userRepository;
     }
 
-
     @PostMapping("/course/new")
     public ResponseEntity createCourse(@Valid @RequestBody NewCourseDTO newCourse) {
         if(courseRepository.existsByCode(newCourse.getCode())) {
