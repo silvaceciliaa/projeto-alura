@@ -78,10 +78,25 @@ public class RegistrationController {
 
     @GetMapping("/registration/report")
     public ResponseEntity<List<RegistrationReportItem>> report() {
+
+        List<Object[]> results = registrationRepository.findCoursesWithMostRegistrations();
+
         List<RegistrationReportItem> items = new ArrayList<>();
 
-        // TODO: Implementar a Questão 4 - Relatório de Cursos Mais Acessados aqui...
+        for (Object[] result : results) {
+            String courseName = (String) result[0];
+            String courseCode = (String) result[1];
+            String instructorName = (String) result[2];
+            String instructorEmail = (String) result[3];
+            Long totalRegistrations = (Long) result[4];
 
+            items.add(new RegistrationReportItem(courseName, courseCode, instructorName, instructorEmail, totalRegistrations));
+        }
+
+        return ResponseEntity.ok(items);
+    }
+
+/*
         // Dados fictícios abaixo que devem ser substituídos
         items.add(new RegistrationReportItem(
                 "Java para Iniciantes",
@@ -109,5 +124,6 @@ public class RegistrationController {
 
         return ResponseEntity.ok(items);
     }
+    */
 
 }
