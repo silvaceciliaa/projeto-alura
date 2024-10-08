@@ -44,7 +44,7 @@ public class CourseController {
         courseRepository.save(course);
 
         SuccessResponseDTO successResponse = new SuccessResponseDTO(
-                "Curso criado com sucesso",
+                "Curso criado com sucesso!",
                 course.getCode()
         );
 
@@ -73,7 +73,7 @@ public class CourseController {
 
         courseRepository.save(course);
         SuccessResponseDTO successResponse = new SuccessResponseDTO(
-                "Curso inativado com sucesso",
+                "Curso inativado com sucesso!",
                 course.getCode()
         );
 
