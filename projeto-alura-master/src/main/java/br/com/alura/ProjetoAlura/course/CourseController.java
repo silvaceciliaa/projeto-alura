@@ -29,7 +29,7 @@ public class CourseController {
     public ResponseEntity createCourse(@Valid @RequestBody NewCourseDTO newCourse) {
         if(courseRepository.existsByCode(newCourse.getCode())) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST)
-                    .body(new ErrorItemDTO("código", "Código de curso já cadastrado no sistema"));
+                    .body(new ErrorItemDTO("code", "Código de curso já cadastrado no sistema"));
         }
 
         Optional<User> instructorUser = userRepository.findByEmail(newCourse.getInstructorEmail());
@@ -48,8 +48,7 @@ public class CourseController {
         courseRepository.save(course);
 
         SuccessResponseDTO successResponse = new SuccessResponseDTO(
-                "Curso criado com sucesso!",
-                course.getCode()
+                "Curso criado com sucesso!"
         );
 
         return ResponseEntity.status(HttpStatus.CREATED).body(successResponse);
@@ -77,12 +76,12 @@ public class CourseController {
 
         courseRepository.save(course);
         SuccessResponseDTO successResponse = new SuccessResponseDTO(
-                "Curso inativado com sucesso!",
-                course.getCode()
+                "Curso inativado com sucesso!"
         );
 
         return ResponseEntity.ok(successResponse);
     }
+
 
     @GetMapping("/course/all")
     public List<CourseListItemDTO> listAllCourses() {
