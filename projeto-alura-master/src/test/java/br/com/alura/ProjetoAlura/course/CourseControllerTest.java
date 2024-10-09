@@ -1,7 +1,6 @@
-package course;
+package br.com.alura.ProjetoAlura.course;
 
 import br.com.alura.ProjetoAlura.ProjetoAluraApplication;
-import br.com.alura.ProjetoAlura.course.*;
 import br.com.alura.ProjetoAlura.user.Role;
 import br.com.alura.ProjetoAlura.user.User;
 import br.com.alura.ProjetoAlura.user.UserRepository;
