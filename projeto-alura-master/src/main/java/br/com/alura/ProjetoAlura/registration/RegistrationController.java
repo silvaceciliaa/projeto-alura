@@ -69,8 +69,7 @@ public class RegistrationController {
         registrationRepository.save(registration);
 
         SuccessResponseDTO successResponse = new SuccessResponseDTO(
-                "Aluno inscrito no curso com sucesso!",
-                registration.getCourseCode()
+                "Aluno inscrito no curso com sucesso!"
         );
 
         return ResponseEntity.status(HttpStatus.CREATED).body(successResponse);

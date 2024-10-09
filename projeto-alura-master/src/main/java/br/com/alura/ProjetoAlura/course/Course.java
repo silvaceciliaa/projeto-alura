@@ -56,6 +56,10 @@ public class Course {
         return code;
     }
 
+    public void setCode(String code) {
+        this.code = code;
+    }
+
     public Status getStatus(){
         return status;
     }

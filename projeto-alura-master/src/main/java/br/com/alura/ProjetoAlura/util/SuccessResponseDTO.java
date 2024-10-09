@@ -7,9 +7,8 @@ public class SuccessResponseDTO {
 
         public SuccessResponseDTO() {}
 
-        public SuccessResponseDTO(String message, String courseCode) {
+        public SuccessResponseDTO(String message) {
             this.message = message;
-            this.courseCode = courseCode;
         }
 
         public String getMessage() {
@@ -30,8 +29,6 @@ public class SuccessResponseDTO {
 
         @Override
         public String toString() {
-            return "message='" + message + '\'' +
-                    ", courseCode='" + courseCode + '\'' +
-                    '}';
+            return "message=" + message ;
         }
 }
