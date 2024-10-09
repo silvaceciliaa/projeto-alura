@@ -1,11 +1,9 @@
 package br.com.alura.ProjetoAlura.registration;
 
-import br.com.alura.ProjetoAlura.course.Course;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
-import static br.com.alura.ProjetoAlura.course.Status.ACTIVE;
 
 public class NewRegistrationDTO {
 

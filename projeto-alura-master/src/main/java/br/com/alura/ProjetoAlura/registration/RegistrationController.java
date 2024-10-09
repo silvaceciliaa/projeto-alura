@@ -44,7 +44,7 @@ public class RegistrationController {
 
         if (studentEmail.isEmpty()) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST)
-                    .body(new ErrorItemDTO("email", "Instrutor não encontrado com o email fornecido"));
+                    .body(new ErrorItemDTO("email", "Estudante não encontrado com o email fornecido"));
         }
 
         if (studentEmail.get().getRole() != Role.STUDENT) {
